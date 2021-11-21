@@ -22,27 +22,27 @@ Get the `invitation_id` from the database, or the server logs and register the u
 the `register-user` command.
 ```
 $ make register-user \
-  INVITATION_ID=<ID_FROM_DB> \
-  EMAIL=test@gmail.com \
-  PASSWORD=test
+    INVITATION_ID=<ID_FROM_DB> \
+    EMAIL=test@gmail.com \
+    PASSWORD=test
 ```
 
 Now that your user is registered. Let's login.
 ```
 $ make login-user \
-  EMAIL=test@gmail.com \
-  PASSWORD=test
+    EMAIL=test@gmail.com \
+    PASSWORD=test
 ```
 Once you get a 200, a cookie should be output to standard out and that can be used to test authenticated routes.
 
 Run the below command to test authentication on protected routes.
 ```
 $ make test-auth \
-  COOKIE=<TOKEN FROM LOGIN COMMAND>
+    COOKIE=<TOKEN FROM LOGIN COMMAND>
 ```
 
 Now that you have validated that login works. Logout with the below command.
 ```
 $ make logout-user \
-  COOKIE=<TOKEN FROM LOGIN COMMAND>
+    COOKIE=<TOKEN FROM LOGIN COMMAND>
 ```
