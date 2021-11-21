@@ -1,19 +1,19 @@
 # Simple Auth Server
-A simple actix server that can be used for user invitation, rregistration, login, and logout. It's designed to
-be really simple mainly as an exercise to learn `rust`, and `actix`. This is not an asyncrounus service
+A simple actix server that can be used for user invitation, registration, login, and logout. It's designed to
+be really simple mainly as an exercise to learn `rust`, and `actix`. This is not an asynchronous service
 that was outside of the scope of this project. The database is `posgres` and the schema is managed with `Diesel`.
 
-In the future I will add some more api endpoints to drive my learning deeper, but at this time i'm not really working
+In the future I will add some more api endpoints to drive my learning deeper, but at this time I'm not really working
 on this project anymore.
 
 ## Getting started
 Running the system is very easy, make sure you have `rust`, `cargo-watch` and `Docker` installed. Once all dependencies
 are installed run `$ make local`. This will run postgres, migrate the db, and run cargo watch on the server. After the system
-is running locally testing the user functionality is also pretty straght forward. It's just a few make targets.
+is running locally testing the user functionality is also pretty straight forward. It's just a few make targets.
 
 ## Testing Functionality
-To kick off the user workflow we need to invite a user to register with the system. You do that with the 
-`invite-user` target. Don't forget to provid an testing email.
+To kick off the user work-flow we need to invite a user to register with the system. You do that with the 
+`invite-user` target. Don't forget to provide an testing email.
 ```
 $ make invite-user EMAIL=test@gmail.com
 ```
